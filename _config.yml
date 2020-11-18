@@ -1,0 +1,18 @@
+title: Lime
+iconURL: assets/icon-lime.png
+theme: jekyll-theme-leaf
+
+# for a clean URL
+permalink: :slug
+
+social:
+  twitter: jekyllrb
+  github: jekyll
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+
+### comments & analytics
+hyvor_talk_website_id: 2408
+google_analytics: UA-NNNNNNNN-N
