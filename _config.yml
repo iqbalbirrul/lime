@@ -1,4 +1,6 @@
 title: Lime
+url: "https://lime.web.id"
+
 iconURL: assets/icon-lime.png
 theme: jekyll-theme-leaf
 
@@ -18,3 +20,6 @@ plugins:
 ### comments & analytics
 hyvor_talk_website_id: 2408
 google_analytics: UA-NNNNNNNN-N
+
+include:
+  - CNAME
