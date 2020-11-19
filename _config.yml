@@ -28,3 +28,8 @@ include:
 exclude:
   - deploy.sh
   - live.sh
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-leaf.gemspec
+  - LICENSE.txt
+  - README.md
