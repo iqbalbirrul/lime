@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-19T10:19:09+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Hello World</title><link href="https://lime.web.id/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2020-11-18T00:00:00+07:00</published><updated>2020-11-18T00:00:00+07:00</updated><id>https://lime.web.id/hello-world</id><content type="html" xml:base="https://lime.web.id/hello-world">&lt;p&gt;Ini adalah post pertama di &lt;strong&gt;Lime.web.id&lt;/strong&gt;. Nantinya akan ada beberapa post lagi, tapi akan sangat jarang.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-19T11:12:19+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Membuat Repository Git</title><link href="https://lime.web.id/membuat-repository-git" rel="alternate" type="text/html" title="Membuat Repository Git" /><published>2020-11-19T00:00:00+07:00</published><updated>2020-11-19T00:00:00+07:00</updated><id>https://lime.web.id/membuat-repository-git</id><content type="html" xml:base="https://lime.web.id/membuat-repository-git">&lt;p&gt;Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.&lt;/p&gt;
+
+&lt;p&gt;Silakan daftar akun github/gitlab pada link dibawah ini.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/join&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/users/sign_up&quot;&gt;GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setelah punya akun github/gitlab, siapkan repository di akun github/gitlab masing-masing.&lt;/p&gt;
+
+&lt;p&gt;Install git pada sistem operasi masing-masing, disini saya pakai linux dengan distro ubuntu.&lt;/p&gt;
+
+&lt;p&gt;Untuk install git, gunakan perintah berikut:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Untuk cek versi, gunakan perintah berikut:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Setelah installasi dilakukan, lakukan konfigurasi awal dengan perintah berikut:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Lime&quot;&lt;/span&gt;
+git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;limegit@gmail.com&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Buat directory dimana repositorymu akan diletakan.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;test-git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;test-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lakukan remote ke repository di github/gitlab, berikut perintahnya:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+git remote add &amp;lt;nama-remote&amp;gt; &amp;lt;url-remote&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;nama-remote&amp;gt;&lt;/code&gt; merupakan nama dari repository, sedangkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;url-remote&amp;gt;&lt;/code&gt; merupakan url dari repository github/gitlab.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add gitlab https://gitlab.com/limegit/jeruk.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ketikan perintah &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git remote -v&lt;/code&gt; untuk melihat repository mana saja yang diremote:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@node:~/git-test/jeruk# git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+gitlab  https://gitlab.com/limegit/jeruk.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+gitlab  https://gitlab.com/limegit/jeruk.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Buat 1 file sebagai untuk test push dari lokal ke github/gitlab:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;touch &lt;/span&gt;README.md
+git add README.md
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;add readme&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Perintah commit disini berfungsi untuk memberikan pesan/catatan perubahan apa saja yang telah dilakukan.&lt;/p&gt;
+
+&lt;p&gt;Langkah terakhir adalah push ke repository:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; gitlab master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian akan muncul form untuk memasukan credential, karena sebelumnya remote yang digunakan adalah https sehingga memerlukan authentikasi.&lt;/p&gt;
+
+&lt;p&gt;Apabila sudah selesai push, cek pada laman repository github/gitlab. Sebagai contoh file yang sudah di_push_ ada pada gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/EP7bwya.png&quot; alt=&quot;File Repository&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selesai, semoga bermanfaat..&lt;/p&gt;</content><author><name>Lime</name></author><summary type="html">Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.</summary></entry><entry><title type="html">Hello World</title><link href="https://lime.web.id/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2020-11-18T00:00:00+07:00</published><updated>2020-11-18T00:00:00+07:00</updated><id>https://lime.web.id/hello-world</id><content type="html" xml:base="https://lime.web.id/hello-world">&lt;p&gt;Ini adalah post pertama di &lt;strong&gt;Lime.web.id&lt;/strong&gt;. Nantinya akan ada beberapa post lagi, tapi akan sangat jarang.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Lime.web.id&lt;/strong&gt; dibangun menggunakan platform blog statis &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; dan hostingnya pakai &lt;a href=&quot;http://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; yang gratis.&lt;/p&gt;
 
