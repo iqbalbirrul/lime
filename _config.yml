@@ -2,7 +2,7 @@ title: Lime
 email: limegit@gmail.com
 url: "https://lime.web.id"
 
-iconURL: assets/icon-lime.png
+iconURL: /assets/icon-lime.png
 theme: jekyll-theme-leaf
 
 destination: docs
