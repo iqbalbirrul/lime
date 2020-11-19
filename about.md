@@ -3,4 +3,4 @@ title: About
 layout: page
 ---
 
-Lime, tidak ada yang lain.
+Citrus × aurantiifolia, tidak ada yang lain.
