@@ -24,3 +24,7 @@ google_analytics: UA-NNNNNNNN-N
 
 include:
   - CNAME
+
+exclude:
+  - deploy.sh
+  - live.sh
