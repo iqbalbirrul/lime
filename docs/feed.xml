@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-19T11:50:05+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Membuat Repository Git</title><link href="https://lime.web.id/2020/11/membuat-repository-git.html" rel="alternate" type="text/html" title="Membuat Repository Git" /><published>2020-11-19T00:00:00+07:00</published><updated>2020-11-19T00:00:00+07:00</updated><id>https://lime.web.id/2020/11/membuat-repository-git</id><content type="html" xml:base="https://lime.web.id/2020/11/membuat-repository-git.html">&lt;p&gt;Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-19T12:42:24+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Membuat Repository Git</title><link href="https://lime.web.id/2020/11/membuat-repository-git.html" rel="alternate" type="text/html" title="Membuat Repository Git" /><published>2020-11-19T11:30:00+07:00</published><updated>2020-11-19T11:30:00+07:00</updated><id>https://lime.web.id/2020/11/membuat-repository-git</id><content type="html" xml:base="https://lime.web.id/2020/11/membuat-repository-git.html">&lt;p&gt;Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.&lt;/p&gt;
 
 &lt;p&gt;Silakan daftar akun github/gitlab pada link dibawah ini.&lt;/p&gt;
 
@@ -68,7 +68,7 @@ git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot
 
 &lt;p&gt;Kemudian akan muncul form untuk memasukan credential, karena sebelumnya remote yang digunakan adalah https sehingga memerlukan authentikasi.&lt;/p&gt;
 
-&lt;p&gt;Apabila sudah selesai push, cek pada laman repository github/gitlab. Sebagai contoh file yang sudah di_push_ ada pada gambar dibawah ini.&lt;/p&gt;
+&lt;p&gt;Apabila sudah selesai push, cek pada laman repository github/gitlab. Sebagai contoh file yang sudah di&lt;em&gt;push&lt;/em&gt; ada pada gambar dibawah ini.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/EP7bwya.png&quot; alt=&quot;File Repository&quot; /&gt;&lt;/p&gt;
 

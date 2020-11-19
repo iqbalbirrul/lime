@@ -2,6 +2,7 @@
 title: Membuat Repository Git
 layout: post
 author: Lime
+date: '2020-11-19 11:30:00'
 ---
 
 Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.
@@ -81,7 +82,7 @@ git push -u gitlab master
 
 Kemudian akan muncul form untuk memasukan credential, karena sebelumnya remote yang digunakan adalah https sehingga memerlukan authentikasi.
 
-Apabila sudah selesai push, cek pada laman repository github/gitlab. Sebagai contoh file yang sudah di_push_ ada pada gambar dibawah ini.
+Apabila sudah selesai push, cek pada laman repository github/gitlab. Sebagai contoh file yang sudah di*push* ada pada gambar dibawah ini.
 
 ![File Repository](https://i.imgur.com/EP7bwya.png)
 
