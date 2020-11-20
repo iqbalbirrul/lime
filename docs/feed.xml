@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-19T13:28:43+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Membuat Repository Git</title><link href="https://lime.web.id/2020/11/membuat-repository-git.html" rel="alternate" type="text/html" title="Membuat Repository Git" /><published>2020-11-19T11:30:00+07:00</published><updated>2020-11-19T11:30:00+07:00</updated><id>https://lime.web.id/2020/11/membuat-repository-git</id><content type="html" xml:base="https://lime.web.id/2020/11/membuat-repository-git.html">&lt;p&gt;Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-20T09:43:40+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><entry><title type="html">Konfigurasi NAT Iptables</title><link href="https://lime.web.id/2020/11/konfigursi-nat-iptables.html" rel="alternate" type="text/html" title="Konfigurasi NAT Iptables" /><published>2020-11-19T13:36:02+07:00</published><updated>2020-11-19T13:36:02+07:00</updated><id>https://lime.web.id/2020/11/konfigursi-nat-iptables</id><content type="html" xml:base="https://lime.web.id/2020/11/konfigursi-nat-iptables.html">&lt;p&gt;Sebelumnya saya sedang mencoba membuat website WordPress dengan topology load balancing, dengan detailnya dibawah ini:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 VM LB&lt;/li&gt;
+  &lt;li&gt;2 VM Web Server&lt;/li&gt;
+  &lt;li&gt;1 VM Database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk VM LB, terdapat 2 interface yaitu IP Publik (eth0) dan IP Private sebagai gateway (eth1) . Sedangkan untuk 3 VM lainnya hanya mempunyai 1 interface saja yaitu IP Private (eth0), sehingga untuk 3 VM ini tidak mendapatkan akses ke internet untuk install maupun update package.&lt;/p&gt;
+
+&lt;p&gt;Guna mengatasi hal tersebut saya memasukan beberapa konfigurasi pada Iptables, agar si eth1 ini mendapatkan akses internet. Cara sebagai berikut:&lt;/p&gt;
+
+&lt;p&gt;Backup terlebih dahulu konfigurasi Iptables yang ada&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; /etc/sysconfig/iptables-config /etc/sysconfig/iptables-config.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Masukan konfigurasi pada kernel&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /proc/sys/net/ipv4/ip_forward
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g&quot;&lt;/span&gt; /etc/sysctl.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Tambahkan konfigurasi pada Iptables&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;iptables &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; nat &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; POSTROUTING &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; eth0 &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; MASQUERADE
+iptables &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; FORWARD &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; eth0 &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; eth1 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; state &lt;span class=&quot;nt&quot;&gt;--state&lt;/span&gt; RELATED,ESTABLISHED &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; ACCEPT
+iptables &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; FORWARD &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; eth1 &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; eth0 &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Restart Iptables&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl reload iptables
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Konfigurasi diatas bertujuan agar koneksi internet bisa diteruskan dari &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eth0&lt;/code&gt; ke&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; eth1&lt;/code&gt;, shingga IP Private yang lain dengan subnet yang sama akan mendapatkan akses internet.&lt;/p&gt;
+
+&lt;p&gt;Segitu saja, semoga bermanfaat.&lt;/p&gt;</content><author><name>limegit@gmail.com</name></author><summary type="html">Sebelumnya saya sedang mencoba membuat website WordPress dengan topology load balancing, dengan detailnya dibawah ini:</summary></entry><entry><title type="html">Membuat Repository Git</title><link href="https://lime.web.id/2020/11/membuat-repository-git.html" rel="alternate" type="text/html" title="Membuat Repository Git" /><published>2020-11-19T11:30:00+07:00</published><updated>2020-11-19T11:30:00+07:00</updated><id>https://lime.web.id/2020/11/membuat-repository-git</id><content type="html" xml:base="https://lime.web.id/2020/11/membuat-repository-git.html">&lt;p&gt;Pertama-tama kita perlu buat akun github atau gitlab, jika mempunyai server git sendiri itu bagus.&lt;/p&gt;
 
 &lt;p&gt;Silakan daftar akun github/gitlab pada link dibawah ini.&lt;/p&gt;
 
