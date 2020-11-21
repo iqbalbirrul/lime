@@ -2,7 +2,7 @@
 title: Konfigurasi NAT Iptables
 layout: post
 author: limegit@gmail.com
-date: '2020-11-19 13:36:02'
+date: '2020-11-20 13:36:02'
 ---
 
 Sebelumnya saya sedang mencoba membuat website WordPress dengan topology load balancing, dengan detailnya dibawah ini:
