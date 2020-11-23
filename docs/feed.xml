@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-24T00:03:55+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><subtitle>Website statis, pembasahan pada artikel-artikel disini akan sangat jarang.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lime.web.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lime.web.id/" rel="alternate" type="text/html" /><updated>2020-11-24T00:13:23+07:00</updated><id>https://lime.web.id/feed.xml</id><title type="html">Lime</title><subtitle>Website statis, pembasahan pada artikel-artikel disini akan sangat jarang.
 </subtitle><entry><title type="html">Konfigurasi NAT Iptables</title><link href="https://lime.web.id/2020/11/konfigursi-nat-iptables.html" rel="alternate" type="text/html" title="Konfigurasi NAT Iptables" /><published>2020-11-20T13:36:02+07:00</published><updated>2020-11-20T13:36:02+07:00</updated><id>https://lime.web.id/2020/11/konfigursi-nat-iptables</id><content type="html" xml:base="https://lime.web.id/2020/11/konfigursi-nat-iptables.html">&lt;p&gt;Sebelumnya saya sedang mencoba membuat website WordPress dengan topology load balancing, dengan detailnya dibawah ini:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -115,5 +115,7 @@ git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot
 &lt;p&gt;&lt;strong&gt;Lime.web.id&lt;/strong&gt; dibangun menggunakan platform blog statis &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; dan hostingnya pakai &lt;a href=&quot;http://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; yang gratis.&lt;/p&gt;
 
 &lt;p&gt;Untuk tema dari blog ini menggunakan tema &lt;a href=&quot;https://github.com/SupunKavinda/jekyll-theme-leaf/&quot;&gt;jekyll-theme-leaf&lt;/a&gt;, tema ini bisa digunakan secara gratis dengan melakukan clone/fork melalui GitHub.&lt;/p&gt;
+
+&lt;p&gt;Website ini menggunakan icon dari gambar vector di website &lt;a href=&quot;https://www.clipartmax.com/middle/m2i8G6N4b1G6b1A0_lime-slice-clip-art-at-clker-limon-vector-png/&quot;&gt;clipartmax.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Segitu saja, terima kasih.&lt;/p&gt;</content><author><name>Lime x Jekyll</name></author><summary type="html">Ini adalah post pertama di Lime.web.id. Nantinya akan ada beberapa post lagi, tapi akan sangat jarang.</summary></entry></feed>
