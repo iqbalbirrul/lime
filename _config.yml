@@ -1,7 +1,7 @@
 title: Lime
 email: limegit@gmail.com
 
-tagline: Citrus × aurantiifolia
+tagline: Cuma Web Statis
 description: >
         Website statis, pembasahan pada artikel-artikel disini akan sangat jarang.
 
@@ -22,6 +22,10 @@ social:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+jekyll_admin:
+  hidden_links:
+    - datafiles
 
 ### comments & analytics
 hyvor_talk_website_id: 2408
